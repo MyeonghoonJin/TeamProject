@@ -1,0 +1,67 @@
+.button {
+  border-radius: 15px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  position: absolute;
+  bottom: 60px;
+  left: 50px;
+  background-color: #d1891d;
+  font-weight: 600;
+  color: white;
+  text-decoration-line: none;
+}
+
+.button:hover {
+  background-color: #f29300;
+}
+.NewTeam_button:hover{
+  background-color: #f29300;
+}
+.RandomTeam_button:hover{
+  background-color: #f29300;
+}
+
+.RoundInput{
+  width: 200px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  padding-left: 20px;
+}
+.NewTeam_button {
+  border-radius: 10px;
+  border: none;
+  padding: 10px 10px;
+  margin:5px 10px;
+  font-size: 15px;
+  position: relative;
+  top : 580px;      
+  background-color: #d1891d;
+  font-weight: 600;
+  color: white;
+  text-decoration-line: none;
+  text-wrap: nowrap;
+  width: 130px;
+}
+.RandomTeam_button {
+  border-radius: 10px;
+  border: none;
+  padding: 10px 10px;
+  margin:5px 10px;
+  font-size: 15px;
+  position: relative;
+  top : 580px;      
+  background-color: #d1891d;
+  font-weight: 600;
+  color: white;
+  text-decoration-line: none;
+  text-wrap: nowrap;
+  width: 130px;
+}
+.buttonBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}

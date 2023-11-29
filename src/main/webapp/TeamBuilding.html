@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html leng = "en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TeamBuilding</title>
+        <link rel="stylesheet" href="./assest/css/style.css" />
+        <script src="./jquery.js"></script>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <div class="main">
+            <div class="imgColumn">
+              <img class="logoImg" src="img/logo.jpg" />
+              <div class="gradient"></div>
+            </div>
+            <div class="firstColumn">
+                <div class="TopBar">
+                    <div class="PageTitle">
+                        <i class="fa-regular fa-handshake" ><b> 새로운 팀 만들기</b></i> 
+                    </div>
+                </div>
+                <hr>
+                <form action="" method="post" class="FormBox">
+                    <div class="InputBox">
+                        <fieldset class="field"><legend>팀 만들기</legend>
+                        <div class="Input">
+                           <b>팀명</b><br><input type="text" name="TeamName" class="InputInfo">
+                        </div>
+                        <div class="Input">
+                            <b>정원</b><br><select name = TeamCapacity id="TC" class="InputInfo_S">
+                                <option value="two">2</option>
+                                <option value="three">3</option>
+                                <option value="four">4</option>
+                                <option value="five">5</option>
+                            </select>
+                        </div>
+                        <div class="Input">
+                            <b>조장 이름</b><br><input type="text" name="HostName"class="InputInfo">
+                        </div>
+                        <div class="Input">
+                            <b>학번</b><br><input type="text" name="HostNum"class="InputInfo">
+                        </div>
+                        <div class="Input">
+                            <b>학과</b><br><select name="HostMajor" id="HM"class="InputInfo_S">
+                                <option value="CSE" class="MajorOpt">컴퓨터 공학과</option>
+                                <option value="DOE" class="MajorOpt">경제학과</option>
+                                <option value="DOL" class="MajorOpt">법학과</option>
+                                <option value="" class="MajorOpt"></option>
+                                <option value="" class="MajorOpt"></option>
+                                <option value="" class="MajorOpt"></option>
+                                <option value="" class="MajorOpt"></option>
+                                <option value="" class="MajorOpt"></option>
+                                <option value="" class="MajorOpt"></option>
+                                <option value="" class="MajorOpt"></option>
+                            </select>
+                        </div>
+                        <div class="Input">
+                            <b>팀 소개</b><br><textarea name="TeamIntro" id="TeamIntro" cols="30" rows="10" class="InputInfo_L"></textarea>
+                        </div>
+                        <div class="Input">
+                            <input type="submit" class="Submit" value="저장">
+                            <button onclick="history.back();" class="Cancel">취소</button> 
+                            <!-- 취소 누르면 js로 이전 페이지로 넘어가게 하기(history.back()함수) -->
+                        </div>
+                    </fieldset>
+                    </div>
+                </form>
+                
+            </div>
+            <div class="secondColumn">
+
+            </div>
+            <script src="https://kit.fontawesome.com/cacb8915e2.js" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assest/css/style.css" />
+    <script src="./jquery.js"></script>
+  </head>
+    <body class ="signInPage">
+      <div class="main">
+        <div class="imgColumn">
+          <img class="logoImg" src="img/logo.jpg" />
+          <div class="gradient"></div>
+        </div>
+        <!-- wrapper -->
+        <div id="signIn_wrapper">
+            <!-- content-->
+            <div id="signIn_content">
+                <form method ="POST" action = "SignIn.jsp">
+                <!-- ID -->
+                <div>
+                    <h3 class ="signInPage">
+                        <label for="id">아이디</label>
+                    </h3>
+                    <span class="signInPage_box int_id">
+                        <input type="text" name="id" class="signInPage_int" maxlength="20">
+                    </span>
+                    <span class="error_next_box"></span>
+                </div>
+
+                <!-- PW1 -->
+                <div>
+                    <h3 class="signInPage"><label for="pswd1">비밀번호</label></h3>
+                    <span class="signInPage_box int_pass">
+                        <input type="password" name="pswd1" class="signInPage_int" maxlength="20">
+                        <span id="alertTxt">사용불가</span>
+                    </span>
+                    <span class="error_next_box"></span>
+                </div>
+
+                <!-- PW2 -->
+                <div>
+                    <h3 class="signInPage"><label for="pswd2">비밀번호 재확인</label></h3>
+                    <span class="signInPage_box int_pass_check">
+                        <input type="password" name="pswd2" class="signInPage_int" maxlength="20">
+                    </span>
+                    <span class="error_next_box"></span>
+                </div>
+
+                <!-- NAME -->
+                <div>
+                    <h3 class="signInPage"><label for="name">이름</label></h3>
+                    <span class="signInPage_box int_name">
+                        <input type="text" name="name" class="signInPage_int" maxlength="20">
+                    </span>
+                    <span class="error_next_box"></span>
+                </div>
+
+                <!--SCHOOL NUMBER-->
+                <div>
+                  <h3 class ="signInPage"><label for ="school_number">학번</label></h3>
+                  <span class ="signInPage_box int_school_number">
+                    <input type ="text" name="school_number" class="signInPage_int" maxlength ="20">
+                  </span>
+                </div>
+
+                <!-- EMAIL -->
+                <div>
+                    <h3 class="signInPage"><label for="email">본인확인 이메일<span class="optional">(선택)</span></label></h3>
+                    <span class="signInPage_box int_email">
+                        <input type="text" name="email" class="signInPage_int" maxlength="100" placeholder="선택입력">
+                    </span>
+                    <span class="error_next_box">이메일 주소를 다시 확인해주세요.</span>    
+                </div>
+
+                <div>
+                  <h3 class = "signInPage"><label for = "grade">신분을 선택하세요</h3>
+                    <select name = "grade" class = "signInPage_grade" size="1">
+                      <option value ="student">학생</option>
+                      <option value ="professor">교수</option>
+                    </select>
+
+                    
+                  </span>
+                </div>
+                
+                <!-- JOIN BTN-->
+                <div class="btn_area">
+                    <input type ="submit" onclick = "redirecthomePage()" id="btnJoin" value ="가입하기">
+                        
+                </div>
+
+                
+
+            </div> 
+          </form>
+            <!-- content-->
+
+        </div> 
+      </div>
+    </div>
+        <!-- wrapper -->
+    <script src="main.js"></script>
+    <script>
+      function redirecthomePage() {
+        window.location.href ='homePage.html';
+      
+      }
+     
+    </script>
+    <!--
+      바로 홈페이지로 가기전에, 일단 회원가입이 잘 진행되었는지 판정해야한다. 
+      우선 현재 회원가입된 아이디와 같은 아이디를 입력시, 중복된 아이디라는 에러를 발생해야하고 
+      다시 회원가입 페이지로 돌아와야한다. 프롬프트도 띄워야 하고. 하지만 성공했다면
+      homePage.html로 이동하면서, 데이터를 database에 넣어야하고, 회원가입에 성공했다는 메세지를 주어야한다. 
+    -->
+    </body>
+</html>
+
+<!-- 잠재적인 문제들 : 
+  1.비밀번호확인을 하는 로직을 넣진 않았음.
+  2.이메일을 넣긴 했지만, 이메일로 잃어버린 비밀번호를 찾긴 어려움. 
+  3.아이디가 중복되었을 때 거부하는 로직은 아직 넣지 않음. 
+  4.회원가입이 성공하면, (버튼을 누르면) 다시 홈페이지로 리다이렉트함과 동시에 서버로 데이터가 가야하며, 
+  만약 아이디가 중복이라면 프롬프트를 띄워서 다시 회원가입페이지로 리다이렉트를 해야함. 
+  또한, 성공이라면 성공했따는 프롬프트를 띄워주는 기능을 추가해야함.
+
+  최소 3번과 4번에 해당하는 부분은 반드시 구현을 해야하는 부분이므르, 후에 java code를 통해 이를 해결해주도록 하자. 
+
+
+-->
